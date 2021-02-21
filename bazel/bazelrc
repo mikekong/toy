@@ -1,0 +1,3 @@
+build --cxxopt='-std=c++17'
+--repo_env=CC=g++
+#build --compiler=clang++
