@@ -2,6 +2,8 @@
 
 using namespace std;
 
+int FLAGS_argv;
+
 class D {
 private:
   int v = 0;
@@ -30,9 +32,18 @@ void f2() {
   const static D d5(5);
 }
 
+int r999(){
+  return FLAGS_argv;
+}
+
+static D d(r999()); 
+
 int main() {
+  FLAGS_argv = 999;
   cout << "main now..." << endl;
   f1();
+
+  D nd(r999());
   return 0;
 }
 

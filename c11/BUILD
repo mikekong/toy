@@ -9,3 +9,9 @@ cc_binary(
   name = "init_time",
   srcs = ["init_time.cc"],
 )
+
+cc_binary(
+  name = "undefine",
+  srcs = ["undefine.cc"],
+)
+
