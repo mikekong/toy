@@ -15,4 +15,22 @@ http_archive(
     urls = ["https://github.com/google/glog/archive/d516278b1cd33cd148e8989aec488b6049a4ca0b.zip"],
 )
 
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+http_archive(
+    name = "com_google_protobuf",
+    sha256 = "f18a40816260a9a3190a94efb0fc26270b244a2436681602f0a944739095d632",
+    strip_prefix = "protobuf-3.15.1",
+    urls = ["https://github.com/protocolbuffers/protobuf/archive/v3.15.1.tar.gz"],
+#    patches = [
+#        "@//third_party:com_google_protobuf_fixes.diff"
+#    ],
+#    patch_args = [
+#        "-p1",
+#    ],
+)
+
+load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
+protobuf_deps()
+
 #workspace(name = "toy")
