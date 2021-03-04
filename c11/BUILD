@@ -20,3 +20,8 @@ cc_binary(
   srcs = ["delete_constructor.cc"],
 )
 
+cc_binary(
+  name = "hello_world",
+  srcs = ["hello_world.cc"],
+)
+
