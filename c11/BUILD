@@ -15,3 +15,8 @@ cc_binary(
   srcs = ["undefine.cc"],
 )
 
+cc_binary(
+  name = "delete_constructor",
+  srcs = ["delete_constructor.cc"],
+)
+
