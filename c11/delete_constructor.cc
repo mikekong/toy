@@ -23,14 +23,14 @@ struct AC {
 
 void f1(vector<int> vs) {
     vector<AC> vt;
-    for (int i = 0; i < vs.size(); ++i) {
+    for (unsigned i = 0; i < vs.size(); ++i) {
         //vt.emplace_back(i);
     }
     if (vs.size() <= 0) return ;
 
     unique_ptr<AC> varr[vs.size()];
 
-    for (int i = 0; i < vs.size(); ++i) {
+    for (unsigned i = 0; i < vs.size(); ++i) {
         varr[i] = make_unique<AC>(i); 
     }
 }
