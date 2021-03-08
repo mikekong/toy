@@ -25,3 +25,9 @@ cc_binary(
   srcs = ["hello_world.cc"],
 )
 
+cc_binary(
+  name = "chrono_cost_time",
+  srcs = ["chrono_cost_time.cc"],
+  linkopts = ["-pthread"],
+)
+
